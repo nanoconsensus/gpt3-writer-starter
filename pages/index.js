@@ -1,5 +1,9 @@
 import { useState } from 'react';
 const [userInput, setUserInput] = useState('');
+const onUserChangedText = (event) => {
+  console.log(event.target.value);
+  setUserInput(event.target.value);
+};
 import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
