@@ -30,7 +30,8 @@ const Home = () => {
             className="prompt-box"
             value={userInput}
             onChange={onUserChangedText}
-/>;
+/>
+   </div>
               {/* New code I added here */}
   <div className="prompt-buttons">
     <a className="generate-button" onClick={null}>
