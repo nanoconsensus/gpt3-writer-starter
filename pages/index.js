@@ -1,3 +1,5 @@
+import { useState } from 'react';
+const [userInput, setUserInput] = useState('');
 import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
@@ -19,7 +21,19 @@ const Home = () => {
         </div>
     {/* Add this code here*/}
         <div className="prompt-container">
-          <textarea placeholder="start typing here" className="prompt-box" />
+          <textarea
+            placeholder="start typing here"
+            className="prompt-box"
+            value={userInput}
+            onChange={onUserChangedText}
+/>
+              {/* New code I added here */}
+  <div className="prompt-buttons">
+    <a className="generate-button" onClick={null}>
+      <div className="generate">
+        <p>Generate</p>
+      </div>
+    </a>
         </div>
       </div>
       <div className="badge-container grow">
